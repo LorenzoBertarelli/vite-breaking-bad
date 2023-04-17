@@ -1,0 +1,17 @@
+@import "bootstrap/scss/bootstrap";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(216, 145, 13, 0.938);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+img {
+    max-width: 100%;
+}
