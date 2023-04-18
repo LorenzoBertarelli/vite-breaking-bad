@@ -30,9 +30,9 @@ export default{
 
 <style scoped lang="scss">
     .container {
+        text-align: center;
         background-color: white;
         max-width: 1300px;
-        margin: 40px 60px; 
         display: flex;
         flex-wrap: wrap;
 
@@ -49,9 +49,17 @@ export default{
         margin: 50px 60px 0 60px;
     }}
 
+    .card {
+        --bs-card-border-width: 0px;
+        background-color: rgba(216, 145, 13, 0.938);
+    }
+
+    .row > * {
+        padding: 0px;
+    }
     .row {
         background-color: white;
-        margin: 0px 50px ;
+        margin: 0px 50px;
     }
 
     .col {

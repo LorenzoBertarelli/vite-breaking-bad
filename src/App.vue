@@ -29,7 +29,19 @@ export default {
   },
   methods: {
     handleFilter() {
-      console.log(filter);
+      if (store.selectArchetype != "") {
+        // chiamata con parametro architype      
+        axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=${store.selectArchetype}`)
+        .then((resp) => {
+           this.store.links = resp.data.data;
+        })
+      } else {
+        // chiamata senza architype
+        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
+        .then((resp) => {
+          this.store.links = resp.data.data;
+        })
+      }
     }
   }
 }

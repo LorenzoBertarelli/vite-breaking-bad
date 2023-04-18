@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="card">
-        <img class="card-img-top" :src="linksObj.card_image" alt="Card image cap">
+        <img class="card-img-top" :src="linksObj.card_images[0].image_url" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{ linksObj.name }}</h5>
             <p class="card-text">{{ linksObj.archetype }}</p>

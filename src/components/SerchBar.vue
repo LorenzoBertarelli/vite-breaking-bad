@@ -14,11 +14,13 @@ export default{
 </script>
 
 <template>
-    <select name="archetype" id="archetype" v-model="store.selectArchetype">
-        <option value="">All</option>
-        <option :value="archetype" v-for="archetype in statusOptions">{{ archetype }}</option>
-    </select>
-    <button @click="$emit('filter')" class="btn btn-warning">Search</button> 
+    <div class="container">
+        <select name="archetype" id="archetype" v-model="store.selectArchetype">
+            <option value="">All</option>
+            <option :value="archetype" v-for="archetype in statusOptions">{{ archetype }}</option>
+        </select>
+        <button @click="$emit('filter')" class="btn btn-warning">Search</button>         
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -26,14 +28,15 @@ export default{
     select {
         font-size: 1.1rem;
         max-width: 1300px;
-        margin-left: 80px; 
         padding: 10px;
         margin-top: 100px;
+        margin-bottom: 40px;
         background-color: white;
         border-radius: 10px;
         border: none;
 
         option {
+            align-items: center;
             background-color: white;
             border-radius: 10px;
         }
