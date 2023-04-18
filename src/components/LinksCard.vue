@@ -2,18 +2,18 @@
 export default {
     name: "linksCard",
     props: {
-        links: Object
+        linksObj: Object
     }
 
 }
 </script>
 
 <template>
-    <div class="text-center">
-        <img class="card-img-top" :src="links.card_image" alt="Card image cap">
+    <div class="card">
+        <img class="card-img-top" :src="linksObj.card_image" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">{{ links.name }}</h5>
-            <p class="card-text">{{ links.type }}</p>
+            <h5 class="card-title">{{ linksObj.name }}</h5>
+            <p class="card-text">{{ linksObj.archetype }}</p>
         </div>
     </div>
 </template>

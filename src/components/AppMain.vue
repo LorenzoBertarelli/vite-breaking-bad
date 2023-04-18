@@ -16,38 +16,19 @@ export default{
 </script>
 
 <template>
-    <select>
-        <option value="Alien">Alien</option>
-        <option value="Human">Human</option>
-        <option value="Zombie">Zombie</option>
-    </select>
     <div class="container">
         <h3>Found 20 cards</h3>
+
+        <AppLoader v-if="store.loading" />
         <div class="row row-cols-5">
             <div class="col" v-for="links in store.links" :key="links.id">
-                <LinksCard :links="links"/>
+                <LinksCard :linksObj="links"/>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-
-    select {
-        font-size: 1.1rem;
-        max-width: 1300px;
-        margin-left: 80px; 
-        padding: 10px;
-        margin-top: 100px;
-        background-color: white;
-        border-radius: 10px;
-        border: none;
-
-        option {
-            background-color: white;
-            border-radius: 10px;
-        }
-    } 
     .container {
         background-color: white;
         max-width: 1300px;
